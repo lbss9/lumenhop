@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Lumenhop.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+>
+    <ScrollViewer
+        Padding="16,8,20,20"
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled"
+    >
+        <StackPanel Spacing="16">
+            <StackPanel Spacing="10">
+                <Grid Width="56" Height="56" HorizontalAlignment="Left">
+                    <Ellipse Width="56" Height="56" Fill="{StaticResource LumenAccentSoftBrush}" />
+                    <Ellipse
+                        Width="36"
+                        Height="36"
+                        Stroke="{StaticResource LumenAccentBrush}"
+                        StrokeThickness="1.2"
+                        Opacity="0.45"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+                    <Ellipse
+                        Width="16"
+                        Height="16"
+                        Fill="{StaticResource LumenAccentBrush}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                    />
+                </Grid>
+                <TextBlock Text="Lumenhop" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock
+                    x:Uid="About_Tagline"
+                    Opacity="0.78"
+                    TextWrapping="Wrap"
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                />
+                <Border
+                    HorizontalAlignment="Left"
+                    CornerRadius="8"
+                    Padding="10,4"
+                    Background="{StaticResource LumenAccentSoftBrush}"
+                >
+                    <TextBlock
+                        x:Name="VersionText"
+                        FontSize="12"
+                        FontWeight="SemiBold"
+                        Foreground="{StaticResource LumenAccentBrush}"
+                    />
+                </Border>
+            </StackPanel>
+
+            <TextBlock
+                x:Uid="About_Description"
+                TextWrapping="Wrap"
+                Style="{ThemeResource BodyTextBlockStyle}"
+            />
+
+            <Grid ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border
+                    Grid.Column="0"
+                    Style="{StaticResource SettingsCardStyle}"
+                    Margin="0"
+                    Padding="12,10"
+                >
+                    <StackPanel Spacing="4">
+                        <FontIcon
+                            Glyph="&#xE704;"
+                            FontSize="14"
+                            Foreground="{StaticResource LumenAccentBrush}"
+                            HorizontalAlignment="Left"
+                        />
+                        <TextBlock
+                            x:Uid="About_CardPingTitle"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                            FontWeight="SemiBold"
+                        />
+                        <TextBlock
+                            x:Uid="About_CardPingBody"
+                            TextWrapping="Wrap"
+                            Opacity="0.7"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                        />
+                    </StackPanel>
+                </Border>
+                <Border
+                    Grid.Column="1"
+                    Style="{StaticResource SettingsCardStyle}"
+                    Margin="0"
+                    Padding="12,10"
+                >
+                    <StackPanel Spacing="4">
+                        <FontIcon
+                            Glyph="&#xE8A7;"
+                            FontSize="14"
+                            Foreground="{StaticResource LumenAccentBrush}"
+                            HorizontalAlignment="Left"
+                        />
+                        <TextBlock
+                            x:Uid="About_CardCornerTitle"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                            FontWeight="SemiBold"
+                        />
+                        <TextBlock
+                            x:Uid="About_CardCornerBody"
+                            TextWrapping="Wrap"
+                            Opacity="0.7"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                        />
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border Style="{StaticResource SettingsCardStyle}" Margin="0" Padding="12,10">
+                <StackPanel Spacing="4">
+                    <FontIcon
+                        Glyph="&#xE7E7;"
+                        FontSize="14"
+                        Foreground="{StaticResource LumenAccentBrush}"
+                        HorizontalAlignment="Left"
+                    />
+                    <TextBlock
+                        x:Uid="About_CardTrayTitle"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                        FontWeight="SemiBold"
+                    />
+                    <TextBlock
+                        x:Uid="About_CardTrayBody"
+                        TextWrapping="Wrap"
+                        Opacity="0.7"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                    />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Spacing="6">
+                <TextBlock
+                    x:Uid="About_ChangelogHeading"
+                    Style="{ThemeResource BodyStrongTextBlockStyle}"
+                />
+                <RichTextBlock x:Name="ChangelogView" IsTextSelectionEnabled="True" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
