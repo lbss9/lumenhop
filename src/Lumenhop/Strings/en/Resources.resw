@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="Nav_Home.Content" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav_Outage.Content" xml:space="preserve"><value>Outages</value></data>
+  <data name="Nav_About.Content" xml:space="preserve"><value>About</value></data>
+
+  <data name="Tray_Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Tray_Close" xml:space="preserve"><value>Close</value></data>
+
+  <data name="Outage_Heading.Text" xml:space="preserve"><value>Outages</value></data>
+  <data name="Outage_Summary.Text" xml:space="preserve"><value>Internet outage monitor</value></data>
+  <data name="Outage_EmptyTitle.Text" xml:space="preserve"><value>Coming soon</value></data>
+  <data name="Outage_EmptyBody.Text" xml:space="preserve"><value>This is where you’ll see when the internet drops, when it comes back, and how long it stayed down. The screen is still being built.</value></data>
+
+  <data name="Home_Heading.Text" xml:space="preserve"><value>Targets</value></data>
+  <data name="Home_Add.Text" xml:space="preserve"><value>Add</value></data>
+  <data name="Home_EmptyTitle.Text" xml:space="preserve"><value>No targets yet</value></data>
+  <data name="Home_EmptyBody.Text" xml:space="preserve"><value>Add an IP or host to start monitoring.</value></data>
+  <data name="Home_EmptyStatus" xml:space="preserve"><value>No targets</value></data>
+  <data name="Home_Summary" xml:space="preserve"><value>{0} online · {1} offline · {2} total</value></data>
+
+  <data name="Card_On" xml:space="preserve"><value>On</value></data>
+  <data name="Card_Off" xml:space="preserve"><value>Off</value></data>
+  <data name="Card_Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="Card_Remove" xml:space="preserve"><value>Remove</value></data>
+  <data name="Card_RemoveTitle" xml:space="preserve"><value>Remove target</value></data>
+  <data name="Card_RemoveBody" xml:space="preserve"><value>Stop watching {0}?</value></data>
+
+  <data name="Editor_NewTitle" xml:space="preserve"><value>New target</value></data>
+  <data name="Editor_EditTitle" xml:space="preserve"><value>Edit target</value></data>
+  <data name="Editor_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Editor_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Editor_Title.Header" xml:space="preserve"><value>Title</value></data>
+  <data name="Editor_Title.PlaceholderText" xml:space="preserve"><value>Cloudflare, Home, Server…</value></data>
+  <data name="Editor_Host.Header" xml:space="preserve"><value>IP or host</value></data>
+  <data name="Editor_Host.PlaceholderText" xml:space="preserve"><value>1.1.1.1 or example.com</value></data>
+  <data name="Editor_Polling.Header" xml:space="preserve"><value>Interval</value></data>
+  <data name="Editor_Icon.Text" xml:space="preserve"><value>Icon</value></data>
+  <data name="Editor_PickImage.Content" xml:space="preserve"><value>Use image…</value></data>
+  <data name="Editor_PollingItem" xml:space="preserve"><value>Every {0}s</value></data>
+  <data name="Editor_PreviewFallback" xml:space="preserve"><value>New target</value></data>
+  <data name="Editor_Invalid" xml:space="preserve"><value>Enter a title and a valid IP or host.</value></data>
+
+  <data name="About_Tagline.Text" xml:space="preserve"><value>A Windows ping monitor.</value></data>
+  <data name="About_Description.Text" xml:space="preserve"><value>Lumenhop is a native Windows ping monitor. Each target becomes a living card: your chosen icon on the left, title and IP in the center, and the pulse with latency on the right.</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Version {0}</value></data>
+  <data name="About_CardPingTitle.Text" xml:space="preserve"><value>Continuous ping</value></data>
+  <data name="About_CardPingBody.Text" xml:space="preserve"><value>ICMP in a loop, with its own interval per target.</value></data>
+  <data name="About_CardCornerTitle.Text" xml:space="preserve"><value>The corner you choose</value></data>
+  <data name="About_CardCornerBody.Text" xml:space="preserve"><value>The window opens in the corner you pick in Settings.</value></data>
+  <data name="About_CardTrayTitle.Text" xml:space="preserve"><value>Quiet tray</value></data>
+  <data name="About_CardTrayBody.Text" xml:space="preserve"><value>Close or minimize to hide it. Pinging keeps running in the background.</value></data>
+  <data name="About_ChangelogHeading.Text" xml:space="preserve"><value>What’s new in this version</value></data>
+
+  <data name="Settings_PollingHeader.Text" xml:space="preserve"><value>Default interval</value></data>
+  <data name="Settings_LanguageHeader.Text" xml:space="preserve"><value>Language</value></data>
+  <data name="Settings_LanguageSystem" xml:space="preserve"><value>System</value></data>
+  <data name="Settings_ThemeHeader.Text" xml:space="preserve"><value>Theme</value></data>
+  <data name="Settings_ThemeSystem" xml:space="preserve"><value>System</value></data>
+  <data name="Settings_ThemeDark" xml:space="preserve"><value>Dark</value></data>
+  <data name="Settings_ThemeLight" xml:space="preserve"><value>Light</value></data>
+  <data name="Settings_PositionHeader.Text" xml:space="preserve"><value>Window position</value></data>
+  <data name="Settings_PositionDescription.Text" xml:space="preserve"><value>Tap the quadrant where Lumenhop should appear when it opens.</value></data>
+  <data name="Settings_Anchor_TopLeft" xml:space="preserve"><value>Top left</value></data>
+  <data name="Settings_Anchor_TopRight" xml:space="preserve"><value>Top right</value></data>
+  <data name="Settings_Anchor_BottomLeft" xml:space="preserve"><value>Bottom left</value></data>
+  <data name="Settings_Anchor_BottomRight" xml:space="preserve"><value>Bottom right</value></data>
+  <data name="Settings_TransparencyHeader.Text" xml:space="preserve"><value>Glass</value></data>
+  <data name="Settings_AcrylicLabel.Text" xml:space="preserve"><value>Acrylic</value></data>
+  <data name="Settings_AcrylicDesc.Text" xml:space="preserve"><value>Blurs the desktop behind the window.</value></data>
+  <data name="Settings_OpacityLabel.Text" xml:space="preserve"><value>Opacity</value></data>
+  <data name="Settings_Apply.Content" xml:space="preserve"><value>Apply</value></data>
+  <data name="Settings_ResetDefault.Content" xml:space="preserve"><value>Reset</value></data>
+  <data name="Settings_StartupHeader.Text" xml:space="preserve"><value>Startup</value></data>
+  <data name="Settings_StartupDescription.Text" xml:space="preserve"><value>Launch Lumenhop when Windows starts.</value></data>
+  <data name="Settings_UpdatesHeader.Text" xml:space="preserve"><value>Updates</value></data>
+  <data name="Settings_CheckOnLaunch.Text" xml:space="preserve"><value>Check for updates on launch</value></data>
+  <data name="Settings_CheckUpdates.Content" xml:space="preserve"><value>Check now</value></data>
+  <data name="Settings_UpdateChecking" xml:space="preserve"><value>Looking for updates…</value></data>
+  <data name="Settings_UpdateCurrent" xml:space="preserve"><value>You are already on the latest version.</value></data>
+  <data name="Settings_UpdateReady" xml:space="preserve"><value>Version {0} is ready to install.</value></data>
+  <data name="Settings_UpdateFailed" xml:space="preserve"><value>Could not check for updates right now.</value></data>
+  <data name="Settings_UpdateDevBuild" xml:space="preserve"><value>Automatic updates only work with the official installer.</value></data>
+  <data name="Settings_QuitHeader.Text" xml:space="preserve"><value>Quit</value></data>
+  <data name="Settings_QuitDescription.Text" xml:space="preserve"><value>Fully exits the app instead of leaving the tray icon behind.</value></data>
+  <data name="Settings_Quit.Content" xml:space="preserve"><value>Quit Lumenhop</value></data>
+
+  <data name="Update_WindowTitle.Text" xml:space="preserve"><value>Update</value></data>
+  <data name="Update_Badge.Text" xml:space="preserve"><value>NEW VERSION</value></data>
+  <data name="Update_VersionLine" xml:space="preserve"><value>Lumenhop {0}</value></data>
+  <data name="Update_Lead.Text" xml:space="preserve"><value>Install now? The app downloads the release and restarts on its own.</value></data>
+  <data name="Update_ChangelogHeading.Text" xml:space="preserve"><value>What’s new</value></data>
+  <data name="Update_Later.Content" xml:space="preserve"><value>Not now</value></data>
+  <data name="Update_Install.Content" xml:space="preserve"><value>Install</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>Downloading the update…</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Download failed. Try again in a moment.</value></data>
+  <data name="Changelog_Missing" xml:space="preserve"><value>Changelog not found.</value></data>
+</root>

@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Lumenhop.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\Lumenhop\Logic\AppInfo.cs" Link="Logic\AppInfo.cs" />
+    <Compile Include="..\..\src\Lumenhop\Logic\AppLanguage.cs" Link="Logic\AppLanguage.cs" />
+    <Compile Include="..\..\src\Lumenhop\Logic\LatencyFormat.cs" Link="Logic\LatencyFormat.cs" />
+    <Compile Include="..\..\src\Lumenhop\Logic\PathGuard.cs" Link="Logic\PathGuard.cs" />
+    <Compile Include="..\..\src\Lumenhop\Logic\SafeTry.cs" Link="Logic\SafeTry.cs" />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\PingProbeResult.cs"
+      Link="Logic\PingProbeResult.cs"
+    />
+    <Compile Include="..\..\src\Lumenhop\Logic\PingState.cs" Link="Logic\PingState.cs" />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\PingStatusMapper.cs"
+      Link="Logic\PingStatusMapper.cs"
+    />
+    <Compile Include="..\..\src\Lumenhop\Logic\PollingOptions.cs" Link="Logic\PollingOptions.cs" />
+    <Compile Include="..\..\src\Lumenhop\Logic\TargetIcons.cs" Link="Logic\TargetIcons.cs" />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\TargetValidator.cs"
+      Link="Logic\TargetValidator.cs"
+    />
+    <Compile Include="..\..\src\Lumenhop\Logic\WindowAnchor.cs" Link="Logic\WindowAnchor.cs" />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\WindowPlacement.cs"
+      Link="Logic\WindowPlacement.cs"
+    />
+    <Compile Include="..\..\src\Lumenhop\Models\PingTarget.cs" Link="Models\PingTarget.cs" />
+  </ItemGroup>
+</Project>

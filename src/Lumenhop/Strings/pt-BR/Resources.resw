@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="Nav_Home.Content" xml:space="preserve"><value>Início</value></data>
+  <data name="Nav_Outage.Content" xml:space="preserve"><value>Quedas</value></data>
+  <data name="Nav_About.Content" xml:space="preserve"><value>Sobre</value></data>
+
+  <data name="Tray_Open" xml:space="preserve"><value>Abrir</value></data>
+  <data name="Tray_Close" xml:space="preserve"><value>Fechar</value></data>
+
+  <data name="Outage_Heading.Text" xml:space="preserve"><value>Quedas</value></data>
+  <data name="Outage_Summary.Text" xml:space="preserve"><value>Monitor de quebra de internet</value></data>
+  <data name="Outage_EmptyTitle.Text" xml:space="preserve"><value>Em breve</value></data>
+  <data name="Outage_EmptyBody.Text" xml:space="preserve"><value>Aqui vai aparecer quando a internet cair, voltar e quanto tempo ficou fora. Ainda estamos montando essa tela.</value></data>
+
+  <data name="Home_Heading.Text" xml:space="preserve"><value>Destinos</value></data>
+  <data name="Home_Add.Text" xml:space="preserve"><value>Adicionar</value></data>
+  <data name="Home_EmptyTitle.Text" xml:space="preserve"><value>Nenhum destino ainda</value></data>
+  <data name="Home_EmptyBody.Text" xml:space="preserve"><value>Adicione um IP ou host para começar a monitorar.</value></data>
+  <data name="Home_EmptyStatus" xml:space="preserve"><value>Sem destinos</value></data>
+  <data name="Home_Summary" xml:space="preserve"><value>{0} online · {1} offline · {2} no total</value></data>
+
+  <data name="Card_On" xml:space="preserve"><value>Ligado</value></data>
+  <data name="Card_Off" xml:space="preserve"><value>Desligado</value></data>
+  <data name="Card_Edit" xml:space="preserve"><value>Editar</value></data>
+  <data name="Card_Remove" xml:space="preserve"><value>Remover</value></data>
+  <data name="Card_RemoveTitle" xml:space="preserve"><value>Remover destino</value></data>
+  <data name="Card_RemoveBody" xml:space="preserve"><value>Parar de monitorar {0}?</value></data>
+
+  <data name="Editor_NewTitle" xml:space="preserve"><value>Novo destino</value></data>
+  <data name="Editor_EditTitle" xml:space="preserve"><value>Editar destino</value></data>
+  <data name="Editor_Save" xml:space="preserve"><value>Salvar</value></data>
+  <data name="Editor_Cancel" xml:space="preserve"><value>Cancelar</value></data>
+  <data name="Editor_Title.Header" xml:space="preserve"><value>Título</value></data>
+  <data name="Editor_Title.PlaceholderText" xml:space="preserve"><value>Cloudflare, Casa, Servidor…</value></data>
+  <data name="Editor_Host.Header" xml:space="preserve"><value>IP ou host</value></data>
+  <data name="Editor_Host.PlaceholderText" xml:space="preserve"><value>1.1.1.1 ou example.com</value></data>
+  <data name="Editor_Polling.Header" xml:space="preserve"><value>Intervalo</value></data>
+  <data name="Editor_Icon.Text" xml:space="preserve"><value>Ícone</value></data>
+  <data name="Editor_PickImage.Content" xml:space="preserve"><value>Usar imagem…</value></data>
+  <data name="Editor_PollingItem" xml:space="preserve"><value>A cada {0}s</value></data>
+  <data name="Editor_PreviewFallback" xml:space="preserve"><value>Novo destino</value></data>
+  <data name="Editor_Invalid" xml:space="preserve"><value>Informe um título e um IP ou host válido.</value></data>
+
+  <data name="About_Tagline.Text" xml:space="preserve"><value>Monitor de ping para Windows.</value></data>
+  <data name="About_Description.Text" xml:space="preserve"><value>O Lumenhop é um monitor de ping nativo do Windows. Cada destino vira um card vivo: o ícone que você escolher à esquerda, o título e o IP no centro, e o pulso com a latência à direita.</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Versão {0}</value></data>
+  <data name="About_CardPingTitle.Text" xml:space="preserve"><value>Ping contínuo</value></data>
+  <data name="About_CardPingBody.Text" xml:space="preserve"><value>ICMP em loop, com intervalo próprio por destino.</value></data>
+  <data name="About_CardCornerTitle.Text" xml:space="preserve"><value>O canto que você escolhe</value></data>
+  <data name="About_CardCornerBody.Text" xml:space="preserve"><value>A janela nasce no canto que você marcar nas configurações.</value></data>
+  <data name="About_CardTrayTitle.Text" xml:space="preserve"><value>Bandeja silenciosa</value></data>
+  <data name="About_CardTrayBody.Text" xml:space="preserve"><value>Fechar ou minimizar recolhe o app. O ping continua em segundo plano.</value></data>
+  <data name="About_ChangelogHeading.Text" xml:space="preserve"><value>Novidades desta versão</value></data>
+
+  <data name="Settings_PollingHeader.Text" xml:space="preserve"><value>Intervalo padrão</value></data>
+  <data name="Settings_LanguageHeader.Text" xml:space="preserve"><value>Idioma</value></data>
+  <data name="Settings_LanguageSystem" xml:space="preserve"><value>Sistema</value></data>
+  <data name="Settings_ThemeHeader.Text" xml:space="preserve"><value>Tema</value></data>
+  <data name="Settings_ThemeSystem" xml:space="preserve"><value>Sistema</value></data>
+  <data name="Settings_ThemeDark" xml:space="preserve"><value>Escuro</value></data>
+  <data name="Settings_ThemeLight" xml:space="preserve"><value>Claro</value></data>
+  <data name="Settings_PositionHeader.Text" xml:space="preserve"><value>Posição da janela</value></data>
+  <data name="Settings_PositionDescription.Text" xml:space="preserve"><value>Toque no quadrante onde o Lumenhop deve aparecer ao abrir.</value></data>
+  <data name="Settings_Anchor_TopLeft" xml:space="preserve"><value>Superior esquerdo</value></data>
+  <data name="Settings_Anchor_TopRight" xml:space="preserve"><value>Superior direito</value></data>
+  <data name="Settings_Anchor_BottomLeft" xml:space="preserve"><value>Inferior esquerdo</value></data>
+  <data name="Settings_Anchor_BottomRight" xml:space="preserve"><value>Inferior direito</value></data>
+  <data name="Settings_TransparencyHeader.Text" xml:space="preserve"><value>Vidro</value></data>
+  <data name="Settings_AcrylicLabel.Text" xml:space="preserve"><value>Acrílico</value></data>
+  <data name="Settings_AcrylicDesc.Text" xml:space="preserve"><value>Desfoca a área de trabalho atrás da janela.</value></data>
+  <data name="Settings_OpacityLabel.Text" xml:space="preserve"><value>Opacidade</value></data>
+  <data name="Settings_Apply.Content" xml:space="preserve"><value>Aplicar</value></data>
+  <data name="Settings_ResetDefault.Content" xml:space="preserve"><value>Restaurar</value></data>
+  <data name="Settings_StartupHeader.Text" xml:space="preserve"><value>Inicialização</value></data>
+  <data name="Settings_StartupDescription.Text" xml:space="preserve"><value>Abrir o Lumenhop junto com o Windows.</value></data>
+  <data name="Settings_UpdatesHeader.Text" xml:space="preserve"><value>Atualizações</value></data>
+  <data name="Settings_CheckOnLaunch.Text" xml:space="preserve"><value>Verificar atualizações ao iniciar</value></data>
+  <data name="Settings_CheckUpdates.Content" xml:space="preserve"><value>Verificar agora</value></data>
+  <data name="Settings_UpdateChecking" xml:space="preserve"><value>Procurando atualizações…</value></data>
+  <data name="Settings_UpdateCurrent" xml:space="preserve"><value>Você já está na versão mais recente.</value></data>
+  <data name="Settings_UpdateReady" xml:space="preserve"><value>A versão {0} está pronta para instalar.</value></data>
+  <data name="Settings_UpdateFailed" xml:space="preserve"><value>Não foi possível verificar atualizações agora.</value></data>
+  <data name="Settings_UpdateDevBuild" xml:space="preserve"><value>Atualizações automáticas só funcionam no instalador oficial.</value></data>
+  <data name="Settings_QuitHeader.Text" xml:space="preserve"><value>Encerrar</value></data>
+  <data name="Settings_QuitDescription.Text" xml:space="preserve"><value>Encerra o aplicativo por completo, sem deixar o ícone na bandeja.</value></data>
+  <data name="Settings_Quit.Content" xml:space="preserve"><value>Sair do Lumenhop</value></data>
+
+  <data name="Update_WindowTitle.Text" xml:space="preserve"><value>Atualização</value></data>
+  <data name="Update_Badge.Text" xml:space="preserve"><value>NOVA VERSÃO</value></data>
+  <data name="Update_VersionLine" xml:space="preserve"><value>Lumenhop {0}</value></data>
+  <data name="Update_Lead.Text" xml:space="preserve"><value>Quer instalar agora? O app baixa a versão e reinicia sozinho.</value></data>
+  <data name="Update_ChangelogHeading.Text" xml:space="preserve"><value>O que mudou</value></data>
+  <data name="Update_Later.Content" xml:space="preserve"><value>Agora não</value></data>
+  <data name="Update_Install.Content" xml:space="preserve"><value>Instalar</value></data>
+  <data name="Update_Downloading" xml:space="preserve"><value>Baixando a atualização…</value></data>
+  <data name="Update_Failed" xml:space="preserve"><value>Não foi possível baixar. Tente de novo em instantes.</value></data>
+  <data name="Changelog_Missing" xml:space="preserve"><value>Changelog não encontrado.</value></data>
+</root>

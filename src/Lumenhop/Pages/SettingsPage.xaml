@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="Lumenhop.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrl="using:Lumenhop.Controls"
+>
+    <ScrollViewer
+        Padding="12,4,20,16"
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Disabled"
+    >
+        <StackPanel>
+            <TextBlock x:Uid="Settings_PollingHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <ComboBox
+                    x:Name="PollingBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="OnPollingChanged"
+                />
+            </Border>
+
+            <TextBlock
+                x:Uid="Settings_LanguageHeader"
+                Style="{StaticResource SectionHeaderStyle}"
+            />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <ComboBox
+                    x:Name="LanguageBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="OnLanguageChanged"
+                />
+            </Border>
+
+            <TextBlock x:Uid="Settings_ThemeHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <ComboBox
+                    x:Name="ThemeBox"
+                    HorizontalAlignment="Stretch"
+                    SelectionChanged="OnThemeChanged"
+                />
+            </Border>
+
+            <TextBlock
+                x:Uid="Settings_PositionHeader"
+                Style="{StaticResource SectionHeaderStyle}"
+            />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="10">
+                    <TextBlock
+                        x:Uid="Settings_PositionDescription"
+                        TextWrapping="Wrap"
+                        Opacity="0.75"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                    />
+                    <ctrl:CornerPicker x:Name="CornerPicker" AnchorChanged="OnAnchorChanged" />
+                </StackPanel>
+            </Border>
+
+            <TextBlock
+                x:Uid="Settings_TransparencyHeader"
+                Style="{StaticResource SectionHeaderStyle}"
+            />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="14">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock
+                                x:Uid="Settings_AcrylicLabel"
+                                Style="{ThemeResource BodyTextBlockStyle}"
+                            />
+                            <TextBlock
+                                x:Uid="Settings_AcrylicDesc"
+                                TextWrapping="Wrap"
+                                Opacity="0.7"
+                                Style="{ThemeResource CaptionTextBlockStyle}"
+                            />
+                        </StackPanel>
+                        <ToggleSwitch
+                            x:Name="AcrylicSwitch"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            MinWidth="0"
+                            OnContent=""
+                            OffContent=""
+                            Toggled="OnAcrylicToggled"
+                        />
+                    </Grid>
+                    <StackPanel x:Name="OpacityPanel" Spacing="6">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                x:Uid="Settings_OpacityLabel"
+                                Style="{ThemeResource BodyTextBlockStyle}"
+                            />
+                            <TextBlock
+                                x:Name="OpacityValue"
+                                Grid.Column="1"
+                                Opacity="0.8"
+                                Style="{ThemeResource BodyTextBlockStyle}"
+                            />
+                        </Grid>
+                        <Slider
+                            x:Name="OpacitySlider"
+                            Minimum="0"
+                            Maximum="100"
+                            StepFrequency="5"
+                            TickFrequency="10"
+                            ValueChanged="OnOpacityChanged"
+                        />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button
+                            x:Uid="Settings_Apply"
+                            Click="OnApplyTransparency"
+                            Style="{ThemeResource AccentButtonStyle}"
+                        />
+                        <Button x:Uid="Settings_ResetDefault" Click="OnResetTransparency" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <TextBlock x:Uid="Settings_StartupHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        x:Uid="Settings_StartupDescription"
+                        Grid.Column="0"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"
+                        Style="{ThemeResource BodyTextBlockStyle}"
+                    />
+                    <ToggleSwitch
+                        x:Name="StartupSwitch"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        MinWidth="0"
+                        OnContent=""
+                        OffContent=""
+                        Toggled="OnStartupToggled"
+                    />
+                </Grid>
+            </Border>
+
+            <TextBlock x:Uid="Settings_UpdatesHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="12">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            x:Uid="Settings_CheckOnLaunch"
+                            Grid.Column="0"
+                            TextWrapping="Wrap"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <ToggleSwitch
+                            x:Name="UpdatesSwitch"
+                            Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            MinWidth="0"
+                            OnContent=""
+                            OffContent=""
+                            Toggled="OnUpdatesToggled"
+                        />
+                    </Grid>
+                    <StackPanel Spacing="6">
+                        <StackPanel Orientation="Horizontal" Spacing="8">
+                            <Button
+                                x:Name="CheckUpdatesButton"
+                                x:Uid="Settings_CheckUpdates"
+                                Click="OnCheckUpdates"
+                            />
+                            <ProgressRing
+                                x:Name="UpdateSpinner"
+                                Width="16"
+                                Height="16"
+                                IsActive="False"
+                            />
+                        </StackPanel>
+                        <TextBlock
+                            x:Name="UpdateStatus"
+                            Opacity="0.8"
+                            TextWrapping="Wrap"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                        />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <TextBlock x:Uid="Settings_QuitHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="8">
+                    <TextBlock
+                        x:Uid="Settings_QuitDescription"
+                        TextWrapping="Wrap"
+                        Opacity="0.75"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                    />
+                    <Button x:Uid="Settings_Quit" Click="OnQuit" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
