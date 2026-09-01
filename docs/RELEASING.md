@@ -16,7 +16,7 @@ One number, three parts: `MAJOR.MINOR.PATCH`.
 
 The first public version is **1.0.0**. Do not use `0.x` from here on — that reads as “not a product yet”. Do not use four numbers (`1.0.0.123`): Windows fills the fourth itself; the tag and Velopack use only three.
 
-`<Version>` in `src/Lumenhop/Lumenhop.csproj` is the source of truth. When it lands on `main`, the `Tag` workflow creates `vX.Y.Z` if that tag does not exist. The tag starts the Release and publishes only the MSI.
+`<Version>` in `src/Lumenhop/Lumenhop.csproj` is the source of truth. When it lands on `main`, the `Tag` workflow creates `vX.Y.Z` if that tag does not exist, then starts the `Release` workflow. GitHub does not chain workflows from a `GITHUB_TOKEN` tag push, so Tag dispatches Release itself. The Release publishes only the MSI.
 
 If the csproj version and the tag diverge, the updater cannot find the right package.
 
