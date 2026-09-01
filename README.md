@@ -92,11 +92,10 @@ pwsh scripts/pack.ps1
 
 Guia completo: [docs/RELEASING.md](docs/RELEASING.md).
 
-| Branch | Papel |
+| | Papel |
 | :--- | :--- |
-| `develop` | trabalho do dia |
-| `main` | estável |
-| tag `vX.Y.Z` | dispara o Setup |
+| `main` | código e releases |
+| tag `vX.Y.Z` | criada sozinha quando a `<Version>` chega na `main` |
 
 ---
 

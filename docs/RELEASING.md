@@ -14,13 +14,9 @@ Um número só, em três partes: `MAJOR.MINOR.PATCH`.
 
 A primeira versão pública é **1.0.0**. Não use `0.x` daqui pra frente — isso sinaliza “ainda não é produto”. Também não use quatro números (`1.0.0.123`): o Windows preenche o quarto sozinho; a tag e o Velopack usam só três.
 
-O mesmo número precisa aparecer nos três lugares:
+A `<Version>` em `src/Lumenhop/Lumenhop.csproj` é a fonte. Ao entrar na `main`, o workflow `Tag` cria `vX.Y.Z` se a tag ainda não existir. Essa tag dispara o Release (portable, MSI e o feed do Velopack).
 
-1. `<Version>` em `src/Lumenhop/Lumenhop.csproj` — o app lê isso no Sobre
-2. Tag `v1.0.0` na `main` — dispara o Release
-3. `--packVersion` do Velopack — o instalado compara com o feed do GitHub
-
-Se um deles divergir, o update não encontra a versão certa.
+Se a versão no csproj e a tag divergirem, o update não encontra o pacote certo.
 
 O repositório do feed é `https://github.com/lbss9/lumenhop` (público, para o app baixar o Release sem token). O app de release só usa essa URL compilada. `LUMENHOP_REPO_URL` vale só no CI / `scripts/pack.ps1`.
 
@@ -32,13 +28,13 @@ dotnet tool install -g vpk
 
 ## Cortar uma versão
 
-1. Trabalhe na `develop`.
-2. Atualize `src/Lumenhop/Assets/changelog/pt-BR.md` e `en.md`.
-3. Suba `<Version>` em `src/Lumenhop/Lumenhop.csproj` (ex.: `1.0.1`).
-4. Abra o PR da `develop` para a `main`.
-5. Na `main`, crie a tag `v1.0.1`.
+Tudo parte da `main`. Abra uma branch `feat/...` ou `fix/...`, depois PR para a `main`.
 
-O workflow `.github/workflows/release.yml` publica o build, empacota com Velopack e sobe os arquivos no Release.
+1. Atualize `src/Lumenhop/Assets/changelog/pt-BR.md` e `en.md`.
+2. Suba `<Version>` em `src/Lumenhop/Lumenhop.csproj` (ex.: `1.0.1`).
+3. Abra o PR para a `main` e faça o merge.
+
+A tag `v1.0.1` e o Release saem sozinhos. Não crie a tag na mão.
 
 ## Empacotar na máquina
 
