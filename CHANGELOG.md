@@ -7,6 +7,14 @@ O que muda em cada versão. No app, o mesmo texto aparece no idioma atual:
 
 ---
 
+## 1.1.0 — 31 de agosto de 2026
+
+Portable e instalador MSI nos Releases.
+
+- `Lumenhop-win-Portable.zip` — extrai e roda, sem instalar
+- `Lumenhop-win-Setup.msi` — instalador do Windows, com atualização automática
+- O `Setup.exe` do Velopack continua no pacote, para quem preferir um clique
+
 ## 1.0.0 — 31 de agosto de 2026
 
 Primeira versão pública.

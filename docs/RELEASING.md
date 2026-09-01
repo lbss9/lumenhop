@@ -50,7 +50,9 @@ pwsh scripts/pack.ps1 -Version 1.0.1
 
 Saída em `artifacts/release/`:
 
-- `Lumenhop-win-Setup.exe` — instalador (é este que habilita auto-update)
+- `Lumenhop-win-Portable.zip` — sem instalar
+- `Lumenhop-win-Setup.msi` — instalador Windows, atualiza sozinho
+- `Lumenhop-win-Setup.exe` — instalador de um clique do Velopack
 - pacote completo e delta da versão anterior, se houver
 
 Para enviar ao GitHub:

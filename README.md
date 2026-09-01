@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/lbss9/lumenhop/releases"><img src="https://img.shields.io/badge/versão-1.0.0-2EE6C7?style=flat-square" alt="1.0.0" /></a>
+  <a href="https://github.com/lbss9/lumenhop/releases"><img src="https://img.shields.io/badge/versão-1.1.0-2EE6C7?style=flat-square" alt="1.1.0" /></a>
   <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
   <img src="https://img.shields.io/badge/WinUI-3-59C8C8?style=flat-square" alt="WinUI 3" />
   <img src="https://img.shields.io/badge/.NET-8-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET 8" />
@@ -60,7 +60,12 @@ Tudo fica em `%LOCALAPPDATA%\Lumenhop`.
 
 ## Instalar
 
-O instalador oficial sai nos [Releases](https://github.com/lbss9/lumenhop/releases) — é o `Lumenhop-win-Setup.exe`. Só ele habilita o auto-update.
+Os [Releases](https://github.com/lbss9/lumenhop/releases) têm dois arquivos para usar:
+
+| Arquivo | Quando usar |
+| :--- | :--- |
+| `Lumenhop-win-Portable.zip` | Sem instalar. Extrai e roda. |
+| `Lumenhop-win-Setup.msi` | Instalador do Windows. Aparece em Programas e atualiza sozinho. |
 
 `dotnet run` e o `.exe` da pasta `bin` são para desenvolvimento. Não atualizam sozinhos. Isso é esperado.
 

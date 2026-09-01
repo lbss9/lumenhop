@@ -12,7 +12,7 @@ public static class AppInfo
         get
         {
             var version = typeof(AppInfo).Assembly.GetName().Version;
-            return version is null ? "1.0.0" : $"{version.Major}.{version.Minor}.{version.Build}";
+            return version is null ? "1.1.0" : $"{version.Major}.{version.Minor}.{version.Build}";
         }
     }
 

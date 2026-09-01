@@ -1,3 +1,12 @@
+# 1.1.0
+
+31 de agosto de 2026
+
+Portable e instalador MSI nos Releases.
+
+- `Lumenhop-win-Portable.zip` — extrai e roda, sem instalar
+- `Lumenhop-win-Setup.msi` — instalador do Windows, com atualização automática
+
 # 1.0.0
 
 31 de agosto de 2026 · primeira versão pública
