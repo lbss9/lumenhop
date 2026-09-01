@@ -42,7 +42,9 @@ if (-not $SkipBuild) {
         "--mainExe", "Lumenhop.exe",
         "--packTitle", "Lumenhop",
         "--icon", $icon,
-        "--outputDir", $release
+        "--outputDir", $release,
+        "--msi",
+        "--instLocation", "Either"
     )
     if (Test-Path $notes) {
         $packArgs += @("--releaseNotes", $notes)
