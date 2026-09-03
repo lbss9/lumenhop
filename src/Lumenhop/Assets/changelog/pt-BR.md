@@ -1,3 +1,11 @@
+# 1.1.2
+
+3 de setembro de 2026 · latência sem piscar
+
+- O número da latência **não pisca mais a cada verificação**. Antes ele piscava para `…` entre as leituras; agora atualiza no lugar, e o "…" aparece só na primeira leitura. A bolinha também parou de piscar a cada ciclo.
+
+---
+
 # 1.1.1
 
 3 de setembro de 2026 · a bolinha combina com o número

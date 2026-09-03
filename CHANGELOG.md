@@ -9,6 +9,16 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.1.2 — 3 September 2026
+
+### Fixed
+
+- The latency number **no longer flickers on each poll**. It used to blink to `…`
+  between readings; now it updates in place, and the probing hint shows only on the
+  first reading. The dot no longer flashes on every cycle either.
+
+---
+
 ## 1.1.1 — 3 September 2026
 
 ### Fixed
