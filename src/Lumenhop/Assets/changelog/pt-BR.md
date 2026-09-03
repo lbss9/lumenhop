@@ -1,3 +1,11 @@
+# 1.2.0
+
+3 de setembro de 2026 · compartilhe seus destinos
+
+- **Importar e exportar** sua lista de destinos, pelo menu `⋯` na tela inicial. A exportação gera um arquivo `.lumenhop` assinado — título, host, ícone e intervalo — que qualquer pessoa pode importar. A importação confere a assinatura e o checksum do arquivo, pula hosts que você já tem e nunca traz dados locais como imagens de ícone.
+
+---
+
 # 1.1.2
 
 3 de setembro de 2026 · latência sem piscar

@@ -1,3 +1,11 @@
+# 1.2.0
+
+3 September 2026 · share your targets
+
+- **Import and export** your list of targets, from the `⋯` menu on Home. Export writes a signed `.lumenhop` file — title, host, icon and interval — that anyone can import. The importer verifies the file's signature and checksum, skips hosts you already have, and never carries over local-only data like custom icon files.
+
+---
+
 # 1.1.2
 
 3 September 2026 · steady latency
