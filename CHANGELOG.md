@@ -9,6 +9,17 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.3.0 — 3 September 2026
+
+Start and stop, all at once.
+
+### Added
+
+- **Start all** and **Stop all** buttons on Home, next to Add — turn every target on or
+  off in a single tap.
+
+---
+
 ## 1.2.1 — 3 September 2026
 
 ### Changed

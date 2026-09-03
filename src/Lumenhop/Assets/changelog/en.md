@@ -1,3 +1,11 @@
+# 1.3.0
+
+3 September 2026 · start and stop, all at once
+
+- **Start all** and **Stop all** buttons on Home, next to Add — turn every target on or off in a single tap.
+
+---
+
 # 1.2.1
 
 3 September 2026 · import/export moved to Settings

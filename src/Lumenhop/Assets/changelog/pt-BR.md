@@ -1,3 +1,11 @@
+# 1.3.0
+
+3 de setembro de 2026 · ligar e desligar todos de uma vez
+
+- Botões **Iniciar todos** e **Parar todos** na tela inicial, ao lado de Adicionar — liga ou desliga todos os destinos num toque só.
+
+---
+
 # 1.2.1
 
 3 de setembro de 2026 · importar/exportar nas configurações
