@@ -25,6 +25,7 @@ public sealed class PingMonitor
         _queue = queue;
         _running = true;
         var settings = SettingsStore.Load();
+        StatusTheme.Palette = settings.Latency.Clone();
         foreach (var target in settings.Targets)
             Upsert(target, persist: false);
 
@@ -74,6 +75,15 @@ public sealed class PingMonitor
             CancelLoop(vm.Id);
 
         Persist();
+        RaiseUpdated();
+    }
+
+    /// <summary>Applies an edited latency palette to every live card.</summary>
+    public void ApplyPalette(LatencyPalette palette)
+    {
+        StatusTheme.Palette = palette.Clone();
+        foreach (var vm in Targets)
+            vm.RefreshColor();
         RaiseUpdated();
     }
 

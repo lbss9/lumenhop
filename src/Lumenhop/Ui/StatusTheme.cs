@@ -3,19 +3,35 @@ using Windows.UI;
 
 namespace Lumenhop;
 
-/// <summary>Aurora palette used by the status dot and latency label.</summary>
+/// <summary>Resolves the status-dot and metric colour from state, latency and the user palette.</summary>
 public static class StatusTheme
 {
-    public static Brush BrushFor(string stateKey) => new SolidColorBrush(ColorFor(stateKey));
+    private static readonly Color Probing = Color.FromArgb(0xFF, 0x5B, 0x9D, 0xFF);
+    private static readonly Color Down = Color.FromArgb(0xFF, 0xFF, 0x5C, 0x7A);
+    private static readonly Color Muted = Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84);
 
-    public static Color ColorFor(string stateKey) =>
-        stateKey switch
+    /// <summary>Latency bands currently in effect; updated when the user edits Settings.</summary>
+    public static LatencyPalette Palette { get; set; } = LatencyPalette.Default;
+
+    public static Color Resolve(PingState state, long? roundtripMs) =>
+        state switch
         {
-            "online" => Color.FromArgb(0xFF, 0x2E, 0xE6, 0xC7),
-            "slow" => Color.FromArgb(0xFF, 0xE3, 0xB3, 0x41),
-            "down" => Color.FromArgb(0xFF, 0xFF, 0x5C, 0x7A),
-            "probing" => Color.FromArgb(0xFF, 0x5B, 0x9D, 0xFF),
-            "off" or "idle" => Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84),
-            _ => Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84),
+            PingState.Probing => Probing,
+            PingState.Down => Down,
+            PingState.Off or PingState.Idle => Muted,
+            _ when roundtripMs is long ms => FromHex(Palette.ColorFor(ms)),
+            _ => Muted,
         };
+
+    public static Brush BrushFor(PingState state, long? roundtripMs) =>
+        new SolidColorBrush(Resolve(state, roundtripMs));
+
+    public static Color FromHex(string hex)
+    {
+        var value = hex.TrimStart('#');
+        var r = System.Convert.ToByte(value.Substring(0, 2), 16);
+        var g = System.Convert.ToByte(value.Substring(2, 2), 16);
+        var b = System.Convert.ToByte(value.Substring(4, 2), 16);
+        return Color.FromArgb(0xFF, r, g, b);
+    }
 }

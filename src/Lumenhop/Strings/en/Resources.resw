@@ -76,6 +76,14 @@
   <data name="Settings_OpacityLabel.Text" xml:space="preserve"><value>Opacity</value></data>
   <data name="Settings_Apply.Content" xml:space="preserve"><value>Apply</value></data>
   <data name="Settings_ResetDefault.Content" xml:space="preserve"><value>Reset</value></data>
+  <data name="Settings_LatencyHeader.Text" xml:space="preserve"><value>Latency colors</value></data>
+  <data name="Settings_LatencyDesc.Text" xml:space="preserve"><value>A target takes the colour of the band its latency falls into. Set the edges and colours.</value></data>
+  <data name="Settings_LatencyGood.Text" xml:space="preserve"><value>Great · up to</value></data>
+  <data name="Settings_LatencyFair.Text" xml:space="preserve"><value>Good · up to</value></data>
+  <data name="Settings_LatencyPoor.Text" xml:space="preserve"><value>Fair · up to</value></data>
+  <data name="Settings_LatencyBad.Text" xml:space="preserve"><value>Poor · above</value></data>
+  <data name="Settings_LatencyUnit.Text" xml:space="preserve"><value>ms</value></data>
+  <data name="Settings_LatencyReset.Content" xml:space="preserve"><value>Reset colors</value></data>
   <data name="Settings_StartupHeader.Text" xml:space="preserve"><value>Startup</value></data>
   <data name="Settings_StartupDescription.Text" xml:space="preserve"><value>Launch Lumenhop when Windows starts.</value></data>
   <data name="Settings_UpdatesHeader.Text" xml:space="preserve"><value>Updates</value></data>

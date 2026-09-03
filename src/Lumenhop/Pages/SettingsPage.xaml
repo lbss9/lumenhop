@@ -127,6 +127,182 @@
                 </StackPanel>
             </Border>
 
+            <TextBlock x:Uid="Settings_LatencyHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="12">
+                    <TextBlock
+                        x:Uid="Settings_LatencyDesc"
+                        TextWrapping="Wrap"
+                        Opacity="0.75"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                    />
+                    <Grid ColumnSpacing="12" RowSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Button
+                            x:Name="GoodSwatch"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Tag="good"
+                            Click="OnSwatchClick"
+                            Width="26"
+                            Height="26"
+                            Padding="0"
+                            BorderThickness="0"
+                            CornerRadius="13"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyGood"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <NumberBox
+                            x:Name="GoodBox"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Width="104"
+                            Minimum="1"
+                            Maximum="2000"
+                            SmallChange="1"
+                            SpinButtonPlacementMode="Compact"
+                            ValueChanged="OnThresholdChanged"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyUnit"
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            VerticalAlignment="Center"
+                            Opacity="0.7"
+                        />
+
+                        <Button
+                            x:Name="FairSwatch"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Tag="fair"
+                            Click="OnSwatchClick"
+                            Width="26"
+                            Height="26"
+                            Padding="0"
+                            BorderThickness="0"
+                            CornerRadius="13"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyFair"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <NumberBox
+                            x:Name="FairBox"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Width="104"
+                            Minimum="1"
+                            Maximum="2000"
+                            SmallChange="1"
+                            SpinButtonPlacementMode="Compact"
+                            ValueChanged="OnThresholdChanged"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyUnit"
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            VerticalAlignment="Center"
+                            Opacity="0.7"
+                        />
+
+                        <Button
+                            x:Name="PoorSwatch"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Tag="poor"
+                            Click="OnSwatchClick"
+                            Width="26"
+                            Height="26"
+                            Padding="0"
+                            BorderThickness="0"
+                            CornerRadius="13"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyPoor"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <NumberBox
+                            x:Name="PoorBox"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Width="104"
+                            Minimum="1"
+                            Maximum="2000"
+                            SmallChange="1"
+                            SpinButtonPlacementMode="Compact"
+                            ValueChanged="OnThresholdChanged"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyUnit"
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            VerticalAlignment="Center"
+                            Opacity="0.7"
+                        />
+
+                        <Button
+                            x:Name="BadSwatch"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Tag="bad"
+                            Click="OnSwatchClick"
+                            Width="26"
+                            Height="26"
+                            Padding="0"
+                            BorderThickness="0"
+                            CornerRadius="13"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyBad"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <TextBlock
+                            x:Name="BadValue"
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Style="{ThemeResource BodyTextBlockStyle}"
+                        />
+                        <TextBlock
+                            x:Uid="Settings_LatencyUnit"
+                            Grid.Row="3"
+                            Grid.Column="3"
+                            VerticalAlignment="Center"
+                            Opacity="0.7"
+                        />
+                    </Grid>
+                    <Button x:Uid="Settings_LatencyReset" Click="OnResetLatency" />
+                </StackPanel>
+            </Border>
+
             <TextBlock x:Uid="Settings_StartupHeader" Style="{StaticResource SectionHeaderStyle}" />
             <Border Style="{StaticResource SettingsCardStyle}">
                 <Grid>

@@ -19,6 +19,10 @@
     <Compile Include="..\..\src\Lumenhop\Logic\AppInfo.cs" Link="Logic\AppInfo.cs" />
     <Compile Include="..\..\src\Lumenhop\Logic\AppLanguage.cs" Link="Logic\AppLanguage.cs" />
     <Compile Include="..\..\src\Lumenhop\Logic\LatencyFormat.cs" Link="Logic\LatencyFormat.cs" />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\LatencyPalette.cs"
+      Link="Logic\LatencyPalette.cs"
+    />
     <Compile Include="..\..\src\Lumenhop\Logic\PathGuard.cs" Link="Logic\PathGuard.cs" />
     <Compile Include="..\..\src\Lumenhop\Logic\SafeTry.cs" Link="Logic\SafeTry.cs" />
     <Compile

@@ -75,6 +75,7 @@
                         <StackPanel Spacing="2" VerticalAlignment="Center">
                             <ctrl:StatusDot
                                 State="{x:Bind StateKey, Mode=OneWay}"
+                                DotColor="{x:Bind StatusColor, Mode=OneWay}"
                                 HorizontalAlignment="Center"
                             />
                             <TextBlock
@@ -82,7 +83,7 @@
                                 HorizontalAlignment="Center"
                                 FontSize="11"
                                 FontWeight="SemiBold"
-                                Foreground="{x:Bind local:StatusTheme.BrushFor(StateKey), Mode=OneWay}"
+                                Foreground="{x:Bind StatusBrush, Mode=OneWay}"
                             />
                         </StackPanel>
                         <Button

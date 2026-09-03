@@ -47,6 +47,8 @@ public static class SettingsStore
 
     private static AppSettings Sanitize(AppSettings settings)
     {
+        settings.Latency = (settings.Latency ?? new LatencyPalette()).Normalized();
+
         foreach (var target in settings.Targets)
         {
             target.Id = PathGuard.SanitizeId(target.Id);

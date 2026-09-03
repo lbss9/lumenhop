@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
+using Windows.UI;
 
 namespace Lumenhop;
 
@@ -84,10 +85,24 @@ public sealed class PingTargetViewModel : INotifyPropertyChanged
             if (!Set(ref _state, value))
                 return;
             OnPropertyChanged(nameof(StateKey));
+            RaiseColorChanged();
         }
     }
 
     public string StateKey => State.ToString().ToLowerInvariant();
+
+    public Color StatusColor => StatusTheme.Resolve(State, _roundtripMs);
+
+    public Brush StatusBrush => new SolidColorBrush(StatusColor);
+
+    /// <summary>Re-evaluates the dot colour after the user edits the latency palette.</summary>
+    public void RefreshColor() => RaiseColorChanged();
+
+    private void RaiseColorChanged()
+    {
+        OnPropertyChanged(nameof(StatusColor));
+        OnPropertyChanged(nameof(StatusBrush));
+    }
 
     public ImageSource? IconImage
     {
@@ -110,6 +125,7 @@ public sealed class PingTargetViewModel : INotifyPropertyChanged
         _roundtripMs = result.RoundtripMs;
         State = state;
         LatencyText = LatencyFormat.Format(result.RoundtripMs, state);
+        RaiseColorChanged();
     }
 
     public void SetProbing()

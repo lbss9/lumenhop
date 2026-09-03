@@ -24,7 +24,7 @@ public sealed partial class StatusDot : UserControl
         Dot.Fill = _dotBrush;
         Halo.Fill = _haloBrush;
         Ring.Stroke = _ringBrush;
-        _lastColor = StatusTheme.ColorFor("idle");
+        _lastColor = StatusTheme.Resolve(PingState.Idle, null);
         Snap(_lastColor);
     }
 
@@ -32,7 +32,7 @@ public sealed partial class StatusDot : UserControl
         nameof(State),
         typeof(string),
         typeof(StatusDot),
-        new PropertyMetadata("idle", OnStateChanged)
+        new PropertyMetadata("idle", OnVisualChanged)
     );
 
     public string State
@@ -41,8 +41,21 @@ public sealed partial class StatusDot : UserControl
         set => SetValue(StateProperty, value);
     }
 
-    private static void OnStateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
-        ((StatusDot)d).Apply((string)(e.NewValue ?? "idle"));
+    public static readonly DependencyProperty DotColorProperty = DependencyProperty.Register(
+        nameof(DotColor),
+        typeof(Color),
+        typeof(StatusDot),
+        new PropertyMetadata(Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84), OnVisualChanged)
+    );
+
+    public Color DotColor
+    {
+        get => (Color)GetValue(DotColorProperty);
+        set => SetValue(DotColorProperty, value);
+    }
+
+    private static void OnVisualChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        ((StatusDot)d).Apply();
 
     private void OnTapped(object sender, TappedRoutedEventArgs e)
     {
@@ -51,11 +64,11 @@ public sealed partial class StatusDot : UserControl
             PingMonitor.Instance.SetEnabled(vm.Id, !vm.IsEnabled);
     }
 
-    private void Apply(string state)
+    private void Apply()
     {
         Pulse.Stop();
-        var key = state.ToLowerInvariant();
-        var color = StatusTheme.ColorFor(key);
+        var key = (State ?? "idle").ToLowerInvariant();
+        var color = DotColor;
         var crossedPower = IsOff(_lastKey) != IsOff(key);
         if (crossedPower && _lastKey != key)
             PlayToggle(_lastColor, color, IsOff(key));

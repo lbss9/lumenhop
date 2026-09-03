@@ -76,6 +76,14 @@
   <data name="Settings_OpacityLabel.Text" xml:space="preserve"><value>Opacidade</value></data>
   <data name="Settings_Apply.Content" xml:space="preserve"><value>Aplicar</value></data>
   <data name="Settings_ResetDefault.Content" xml:space="preserve"><value>Restaurar</value></data>
+  <data name="Settings_LatencyHeader.Text" xml:space="preserve"><value>Cores por latência</value></data>
+  <data name="Settings_LatencyDesc.Text" xml:space="preserve"><value>Cada destino recebe a cor da faixa em que sua latência cai. Defina os limites e as cores.</value></data>
+  <data name="Settings_LatencyGood.Text" xml:space="preserve"><value>Ótimo · até</value></data>
+  <data name="Settings_LatencyFair.Text" xml:space="preserve"><value>Bom · até</value></data>
+  <data name="Settings_LatencyPoor.Text" xml:space="preserve"><value>Regular · até</value></data>
+  <data name="Settings_LatencyBad.Text" xml:space="preserve"><value>Ruim · acima de</value></data>
+  <data name="Settings_LatencyUnit.Text" xml:space="preserve"><value>ms</value></data>
+  <data name="Settings_LatencyReset.Content" xml:space="preserve"><value>Restaurar cores</value></data>
   <data name="Settings_StartupHeader.Text" xml:space="preserve"><value>Inicialização</value></data>
   <data name="Settings_StartupDescription.Text" xml:space="preserve"><value>Abrir o Lumenhop junto com o Windows.</value></data>
   <data name="Settings_UpdatesHeader.Text" xml:space="preserve"><value>Atualizações</value></data>

@@ -20,4 +20,6 @@ public sealed class AppSettings
     public string WindowAnchor { get; set; } = nameof(Lumenhop.WindowAnchor.BottomRight);
 
     public bool CheckUpdatesOnLaunch { get; set; } = true;
+
+    public LatencyPalette Latency { get; set; } = new();
 }
