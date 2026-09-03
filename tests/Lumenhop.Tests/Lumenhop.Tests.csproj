@@ -23,6 +23,10 @@
       Include="..\..\src\Lumenhop\Logic\LatencyPalette.cs"
       Link="Logic\LatencyPalette.cs"
     />
+    <Compile
+      Include="..\..\src\Lumenhop\Logic\TargetTransfer.cs"
+      Link="Logic\TargetTransfer.cs"
+    />
     <Compile Include="..\..\src\Lumenhop\Logic\PathGuard.cs" Link="Logic\PathGuard.cs" />
     <Compile Include="..\..\src\Lumenhop\Logic\SafeTry.cs" Link="Logic\SafeTry.cs" />
     <Compile

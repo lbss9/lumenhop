@@ -109,5 +109,16 @@
   <data name="Update_Failed" xml:space="preserve"><value>Não foi possível baixar. Tente de novo em instantes.</value></data>
   <data name="Update_ToastTitle" xml:space="preserve"><value>Atualização disponível</value></data>
   <data name="Update_ToastBody" xml:space="preserve"><value>Lumenhop {0} está pronta. Abra o app para instalar.</value></data>
+  <data name="Home_Transfer" xml:space="preserve"><value>Importar / Exportar</value></data>
+  <data name="Home_Export" xml:space="preserve"><value>Exportar destinos</value></data>
+  <data name="Home_Import" xml:space="preserve"><value>Importar destinos</value></data>
+  <data name="Transfer_Title" xml:space="preserve"><value>Importar / Exportar</value></data>
+  <data name="Export_Empty" xml:space="preserve"><value>Nenhum destino para exportar.</value></data>
+  <data name="Export_Done" xml:space="preserve"><value>Destinos exportados.</value></data>
+  <data name="Import_Invalid" xml:space="preserve"><value>Arquivo inválido ou não reconhecido.</value></data>
+  <data name="Import_None" xml:space="preserve"><value>Nada novo para importar.</value></data>
+  <data name="Import_Body" xml:space="preserve"><value>Adicionar {0} destino(s) à sua lista?</value></data>
+  <data name="Import_Confirm" xml:space="preserve"><value>Importar</value></data>
+  <data name="Import_Added" xml:space="preserve"><value>{0} destino(s) importado(s).</value></data>
   <data name="Changelog_Missing" xml:space="preserve"><value>Changelog não encontrado.</value></data>
 </root>

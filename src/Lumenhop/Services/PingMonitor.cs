@@ -78,6 +78,35 @@ public sealed class PingMonitor
         RaiseUpdated();
     }
 
+    /// <summary>Adds imported targets, skipping hosts already on the list. Returns how many were added.</summary>
+    public int ImportTargets(IEnumerable<PingTarget> targets)
+    {
+        var known = new HashSet<string>(
+            Targets.Select(item => item.Host),
+            StringComparer.OrdinalIgnoreCase
+        );
+
+        var added = 0;
+        foreach (var target in targets)
+        {
+            if (!TargetValidator.IsValid(target) || !known.Add(target.Host))
+                continue;
+
+            target.Id = Guid.NewGuid().ToString("N");
+            var vm = PingTargetViewModel.FromTarget(target);
+            Targets.Add(vm);
+            RestartLoop(vm);
+            added++;
+        }
+
+        if (added > 0)
+        {
+            Persist();
+            RaiseUpdated();
+        }
+        return added;
+    }
+
     /// <summary>Applies an edited latency palette to every live card.</summary>
     public void ApplyPalette(LatencyPalette palette)
     {
