@@ -1,3 +1,11 @@
+# 1.1.1
+
+3 September 2026 · the dot matches the number
+
+- The status dot now takes the **same color as the latency number**. It was stuck on gray while the number was already colored by band.
+
+---
+
 # 1.1.0
 
 3 September 2026 · colors you choose

@@ -1,3 +1,11 @@
+# 1.1.1
+
+3 de setembro de 2026 · a bolinha combina com o número
+
+- A bolinha de status agora fica com a **mesma cor do número da latência**. Ela estava presa no cinza enquanto o número já vinha colorido pela faixa.
+
+---
+
 # 1.1.0
 
 3 de setembro de 2026 · as cores são suas
