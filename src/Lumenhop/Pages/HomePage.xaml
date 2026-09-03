@@ -122,19 +122,8 @@
                 Style="{ThemeResource BodyStrongTextBlockStyle}"
             />
             <Button
-                Grid.Column="1"
-                Click="OnAdd"
-                Style="{ThemeResource AccentButtonStyle}"
-                Padding="10,6"
-            >
-                <StackPanel Orientation="Horizontal" Spacing="6">
-                    <FontIcon Glyph="&#xE710;" FontSize="12" />
-                    <TextBlock x:Uid="Home_Add" />
-                </StackPanel>
-            </Button>
-            <Button
                 x:Name="StartAllButton"
-                Grid.Column="2"
+                Grid.Column="1"
                 Click="OnStartAll"
                 Style="{StaticResource GhostButtonStyle}"
                 Width="34"
@@ -146,7 +135,7 @@
             </Button>
             <Button
                 x:Name="StopAllButton"
-                Grid.Column="3"
+                Grid.Column="2"
                 Click="OnStopAll"
                 Style="{StaticResource GhostButtonStyle}"
                 Width="34"
@@ -155,6 +144,17 @@
                 VerticalAlignment="Center"
             >
                 <FontIcon Glyph="&#xE71A;" FontSize="14" />
+            </Button>
+            <Button
+                Grid.Column="3"
+                Click="OnAdd"
+                Style="{ThemeResource AccentButtonStyle}"
+                Padding="10,6"
+            >
+                <StackPanel Orientation="Horizontal" Spacing="6">
+                    <FontIcon Glyph="&#xE710;" FontSize="12" />
+                    <TextBlock x:Uid="Home_Add" />
+                </StackPanel>
             </Button>
         </Grid>
 
