@@ -32,7 +32,7 @@ public sealed partial class StatusDot : UserControl
         nameof(State),
         typeof(string),
         typeof(StatusDot),
-        new PropertyMetadata("idle", OnVisualChanged)
+        new PropertyMetadata("idle", OnStateChanged)
     );
 
     public string State
@@ -45,7 +45,7 @@ public sealed partial class StatusDot : UserControl
         nameof(DotColor),
         typeof(Color),
         typeof(StatusDot),
-        new PropertyMetadata(Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84), OnVisualChanged)
+        new PropertyMetadata(Color.FromArgb(0xFF, 0x7A, 0x7A, 0x84), OnColorChanged)
     );
 
     public Color DotColor
@@ -54,8 +54,11 @@ public sealed partial class StatusDot : UserControl
         set => SetValue(DotColorProperty, value);
     }
 
-    private static void OnVisualChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
-        ((StatusDot)d).Apply();
+    private static void OnStateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        ((StatusDot)d).ApplyState((string)(e.NewValue ?? "idle"));
+
+    private static void OnColorChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) =>
+        ((StatusDot)d).SetColor((Color)e.NewValue);
 
     private void OnTapped(object sender, TappedRoutedEventArgs e)
     {
@@ -64,19 +67,21 @@ public sealed partial class StatusDot : UserControl
             PingMonitor.Instance.SetEnabled(vm.Id, !vm.IsEnabled);
     }
 
-    private void Apply()
+    /// <summary>Sets the dot, halo and ring to the band colour supplied by the view-model.</summary>
+    private void SetColor(Color color)
     {
-        Pulse.Stop();
-        var key = (State ?? "idle").ToLowerInvariant();
-        var color = DotColor;
-        var crossedPower = IsOff(_lastKey) != IsOff(key);
-        if (crossedPower && _lastKey != key)
-            PlayToggle(_lastColor, color, IsOff(key));
-        else
-            Snap(color);
-
-        _lastKey = key;
+        _dotBrush.Color = color;
+        _haloBrush.Color = color;
+        _ringBrush.Color = color;
         _lastColor = color;
+    }
+
+    private void ApplyState(string state)
+    {
+        var key = state.ToLowerInvariant();
+        if (IsOff(_lastKey) != IsOff(key))
+            PlayPop(IsOff(key));
+        _lastKey = key;
 
         if (key is "online" or "probing" or "slow")
         {
@@ -85,52 +90,27 @@ public sealed partial class StatusDot : UserControl
             return;
         }
 
+        Pulse.Stop();
         Halo.Opacity = 0;
     }
 
     private void Snap(Color color)
     {
-        _dotBrush.Color = color;
-        _haloBrush.Color = color;
-        _ringBrush.Color = color;
+        SetColor(color);
         Pop.ScaleX = 1;
         Pop.ScaleY = 1;
     }
 
-    private void PlayToggle(Color from, Color to, bool turningOff)
+    private void PlayPop(bool turningOff)
     {
         _toggle?.Stop();
-        Snap(from);
         var duration = new Duration(TimeSpan.FromMilliseconds(280));
         var ease = new CubicEase { EasingMode = EasingMode.EaseInOut };
         var board = new Storyboard();
-        board.Children.Add(ColorAnim(_dotBrush, from, to, duration, ease));
-        board.Children.Add(ColorAnim(_haloBrush, from, to, duration, ease));
-        board.Children.Add(ColorAnim(_ringBrush, from, to, duration, ease));
         board.Children.Add(ScaleAnim("ScaleX", turningOff ? 0.72 : 1.18, duration, ease));
         board.Children.Add(ScaleAnim("ScaleY", turningOff ? 0.72 : 1.18, duration, ease));
         _toggle = board;
         board.Begin();
-    }
-
-    private static ColorAnimation ColorAnim(
-        SolidColorBrush brush,
-        Color from,
-        Color to,
-        Duration duration,
-        EasingFunctionBase ease
-    )
-    {
-        var anim = new ColorAnimation
-        {
-            From = from,
-            To = to,
-            Duration = duration,
-            EasingFunction = ease,
-        };
-        Storyboard.SetTarget(anim, brush);
-        Storyboard.SetTargetProperty(anim, "Color");
-        return anim;
     }
 
     private DoubleAnimation ScaleAnim(
