@@ -109,9 +109,11 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid ColumnSpacing="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <StackPanel Spacing="2" VerticalAlignment="Center">
@@ -119,6 +121,8 @@
                 <TextBlock
                     x:Name="SummaryText"
                     Opacity="0.7"
+                    TextWrapping="NoWrap"
+                    TextTrimming="CharacterEllipsis"
                     Style="{ThemeResource CaptionTextBlockStyle}"
                 />
             </StackPanel>
@@ -132,6 +136,30 @@
                     <FontIcon Glyph="&#xE710;" FontSize="12" />
                     <TextBlock x:Uid="Home_Add" />
                 </StackPanel>
+            </Button>
+            <Button
+                x:Name="StartAllButton"
+                Grid.Column="2"
+                Click="OnStartAll"
+                Style="{StaticResource GhostButtonStyle}"
+                Width="34"
+                Height="34"
+                Padding="0"
+                VerticalAlignment="Center"
+            >
+                <FontIcon Glyph="&#xE768;" FontSize="14" Foreground="{StaticResource LumenAccentBrush}" />
+            </Button>
+            <Button
+                x:Name="StopAllButton"
+                Grid.Column="3"
+                Click="OnStopAll"
+                Style="{StaticResource GhostButtonStyle}"
+                Width="34"
+                Height="34"
+                Padding="0"
+                VerticalAlignment="Center"
+            >
+                <FontIcon Glyph="&#xE71A;" FontSize="14" />
             </Button>
         </Grid>
 

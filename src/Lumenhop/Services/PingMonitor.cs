@@ -116,6 +116,22 @@ public sealed class PingMonitor
         RaiseUpdated();
     }
 
+    /// <summary>Turns every target on or off at once.</summary>
+    public void SetAllEnabled(bool enabled)
+    {
+        foreach (var vm in Targets)
+        {
+            vm.IsEnabled = enabled;
+            if (enabled)
+                RestartLoop(vm);
+            else
+                CancelLoop(vm.Id);
+        }
+
+        Persist();
+        RaiseUpdated();
+    }
+
     public string Summary()
     {
         if (Targets.Count == 0)

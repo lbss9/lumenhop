@@ -121,5 +121,7 @@
   <data name="Import_Body" xml:space="preserve"><value>Add {0} target(s) to your list?</value></data>
   <data name="Import_Confirm" xml:space="preserve"><value>Import</value></data>
   <data name="Import_Added" xml:space="preserve"><value>{0} target(s) imported.</value></data>
+  <data name="Home_StartAll" xml:space="preserve"><value>Start all</value></data>
+  <data name="Home_StopAll" xml:space="preserve"><value>Stop all</value></data>
   <data name="Changelog_Missing" xml:space="preserve"><value>Changelog not found.</value></data>
 </root>

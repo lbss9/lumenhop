@@ -19,8 +19,16 @@ public sealed partial class HomePage : Page
     {
         PingMonitor.Instance.Updated -= OnMonitorUpdated;
         PingMonitor.Instance.Updated += OnMonitorUpdated;
+        ToolTipService.SetToolTip(StartAllButton, Loc.Get("Home_StartAll"));
+        ToolTipService.SetToolTip(StopAllButton, Loc.Get("Home_StopAll"));
         RefreshChrome();
     }
+
+    private void OnStartAll(object sender, RoutedEventArgs e) =>
+        PingMonitor.Instance.SetAllEnabled(true);
+
+    private void OnStopAll(object sender, RoutedEventArgs e) =>
+        PingMonitor.Instance.SetAllEnabled(false);
 
     private void OnUnloaded(object sender, RoutedEventArgs e)
     {

@@ -22,7 +22,7 @@
   <data name="Home_EmptyTitle.Text" xml:space="preserve"><value>Nenhum destino ainda</value></data>
   <data name="Home_EmptyBody.Text" xml:space="preserve"><value>Adicione um IP ou host para começar a monitorar.</value></data>
   <data name="Home_EmptyStatus" xml:space="preserve"><value>Sem destinos</value></data>
-  <data name="Home_Summary" xml:space="preserve"><value>{0} online · {1} offline · {2} no total</value></data>
+  <data name="Home_Summary" xml:space="preserve"><value>{0} online · {1} offline · {2} total</value></data>
 
   <data name="Card_On" xml:space="preserve"><value>Ligado</value></data>
   <data name="Card_Off" xml:space="preserve"><value>Desligado</value></data>
@@ -121,5 +121,7 @@
   <data name="Import_Body" xml:space="preserve"><value>Adicionar {0} destino(s) à sua lista?</value></data>
   <data name="Import_Confirm" xml:space="preserve"><value>Importar</value></data>
   <data name="Import_Added" xml:space="preserve"><value>{0} destino(s) importado(s).</value></data>
+  <data name="Home_StartAll" xml:space="preserve"><value>Iniciar todos</value></data>
+  <data name="Home_StopAll" xml:space="preserve"><value>Parar todos</value></data>
   <data name="Changelog_Missing" xml:space="preserve"><value>Changelog não encontrado.</value></data>
 </root>
