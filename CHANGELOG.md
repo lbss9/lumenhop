@@ -9,6 +9,18 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.1.0 — 3 September 2026
+
+Colors you choose.
+
+### Added
+
+- **Configurable latency colors** in Settings. Four bands — great, good, fair, poor —
+  each with an editable threshold and its own color picker. The status dot and the
+  latency number both take the band's color. Restore the defaults anytime.
+
+---
+
 ## 1.0.2 — 3 September 2026
 
 Updates that find you.

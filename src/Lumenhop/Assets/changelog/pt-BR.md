@@ -1,3 +1,11 @@
+# 1.1.0
+
+3 de setembro de 2026 · as cores são suas
+
+- **Cores por latência configuráveis** em Configurações. Quatro faixas — ótimo, bom, regular e ruim — cada uma com um limite editável e seu próprio seletor de cor. A bolinha e o número da latência assumem a cor da faixa. Dá para restaurar o padrão quando quiser.
+
+---
+
 # 1.0.2
 
 3 de setembro de 2026 · aviso de atualização que te encontra

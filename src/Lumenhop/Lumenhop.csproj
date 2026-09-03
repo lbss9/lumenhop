@@ -16,7 +16,7 @@
     <LangVersion>latest</LangVersion>
     <EnableMsixTooling>true</EnableMsixTooling>
     <DefaultLanguage>pt-BR</DefaultLanguage>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <ApplicationIcon>Assets\Lumenhop.ico</ApplicationIcon>
     <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>

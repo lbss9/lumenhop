@@ -1,3 +1,11 @@
+# 1.1.0
+
+3 September 2026 · colors you choose
+
+- **Configurable latency colors** in Settings. Four bands — great, good, fair, poor — each with an editable threshold and its own color picker. The dot and the latency number take the band's color. Restore the defaults anytime.
+
+---
+
 # 1.0.2
 
 3 September 2026 · updates that find you
