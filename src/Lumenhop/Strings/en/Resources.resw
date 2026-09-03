@@ -109,9 +109,10 @@
   <data name="Update_Failed" xml:space="preserve"><value>Download failed. Try again in a moment.</value></data>
   <data name="Update_ToastTitle" xml:space="preserve"><value>Update available</value></data>
   <data name="Update_ToastBody" xml:space="preserve"><value>Lumenhop {0} is ready. Open the app to install.</value></data>
-  <data name="Home_Transfer" xml:space="preserve"><value>Import / Export</value></data>
-  <data name="Home_Export" xml:space="preserve"><value>Export targets</value></data>
-  <data name="Home_Import" xml:space="preserve"><value>Import targets</value></data>
+  <data name="Settings_TransferHeader.Text" xml:space="preserve"><value>Import / Export</value></data>
+  <data name="Settings_TransferDesc.Text" xml:space="preserve"><value>Share your target list, or bring in someone else's.</value></data>
+  <data name="Settings_Export.Text" xml:space="preserve"><value>Export</value></data>
+  <data name="Settings_Import.Text" xml:space="preserve"><value>Import</value></data>
   <data name="Transfer_Title" xml:space="preserve"><value>Import / Export</value></data>
   <data name="Export_Empty" xml:space="preserve"><value>No targets to export.</value></data>
   <data name="Export_Done" xml:space="preserve"><value>Targets exported.</value></data>

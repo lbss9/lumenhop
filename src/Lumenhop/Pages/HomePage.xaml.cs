@@ -1,10 +1,7 @@
-using System.IO;
 using Lumenhop.Controls;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
-using Windows.Storage.Pickers;
-using WinRT.Interop;
 
 namespace Lumenhop.Pages;
 
@@ -22,7 +19,6 @@ public sealed partial class HomePage : Page
     {
         PingMonitor.Instance.Updated -= OnMonitorUpdated;
         PingMonitor.Instance.Updated += OnMonitorUpdated;
-        ToolTipService.SetToolTip(TransferButton, Loc.Get("Home_Transfer"));
         RefreshChrome();
     }
 
@@ -57,92 +53,6 @@ public sealed partial class HomePage : Page
     }
 
     private async void OnAdd(object sender, RoutedEventArgs e) => await ShowEditorAsync(null);
-
-    private void OnTransferMenu(object sender, RoutedEventArgs e)
-    {
-        if (sender is not Button button)
-            return;
-
-        var flyout = new MenuFlyout();
-        flyout.Items.Add(MenuItem(Loc.Get("Home_Export"), async () => await ExportAsync()));
-        flyout.Items.Add(MenuItem(Loc.Get("Home_Import"), async () => await ImportAsync()));
-        flyout.ShowAt(button);
-    }
-
-    private async Task ExportAsync()
-    {
-        if (PingMonitor.Instance.Targets.Count == 0)
-        {
-            await NoticeAsync(Loc.Get("Export_Empty"));
-            return;
-        }
-
-        var picker = new FileSavePicker { SuggestedFileName = "lumenhop-destinos" };
-        picker.FileTypeChoices.Add("Lumenhop", [TargetTransfer.FileExtension]);
-        InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(App.Main));
-
-        var file = await picker.PickSaveFileAsync();
-        if (file is null)
-            return;
-
-        var json = TargetTransfer.Export(
-            PingMonitor.Instance.Targets.Select(vm => vm.ToTarget()),
-            AppInfo.Version
-        );
-        await File.WriteAllTextAsync(file.Path, json);
-        await NoticeAsync(Loc.Get("Export_Done"));
-    }
-
-    private async Task ImportAsync()
-    {
-        var picker = new FileOpenPicker();
-        picker.FileTypeFilter.Add(TargetTransfer.FileExtension);
-        InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(App.Main));
-
-        var file = await picker.PickSingleFileAsync();
-        if (file is null)
-            return;
-
-        var content = await File.ReadAllTextAsync(file.Path);
-        var result = TargetTransfer.Import(content);
-        if (!result.Ok)
-        {
-            await NoticeAsync(Loc.Get("Import_Invalid"));
-            return;
-        }
-        if (result.Targets.Count == 0)
-        {
-            await NoticeAsync(Loc.Get("Import_None"));
-            return;
-        }
-
-        var confirm = new ContentDialog
-        {
-            XamlRoot = XamlRoot,
-            Title = Loc.Get("Transfer_Title"),
-            Content = string.Format(Loc.Get("Import_Body"), result.Targets.Count),
-            PrimaryButtonText = Loc.Get("Import_Confirm"),
-            CloseButtonText = Loc.Get("Editor_Cancel"),
-            DefaultButton = ContentDialogButton.Primary,
-        };
-        if (await confirm.ShowAsync() != ContentDialogResult.Primary)
-            return;
-
-        var added = PingMonitor.Instance.ImportTargets(result.Targets);
-        await NoticeAsync(string.Format(Loc.Get("Import_Added"), added));
-    }
-
-    private async Task NoticeAsync(string body)
-    {
-        var dialog = new ContentDialog
-        {
-            XamlRoot = XamlRoot,
-            Title = Loc.Get("Transfer_Title"),
-            Content = body,
-            CloseButtonText = "OK",
-        };
-        await dialog.ShowAsync();
-    }
 
     private void OnCardMenuClick(object sender, RoutedEventArgs e)
     {

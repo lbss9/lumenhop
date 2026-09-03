@@ -378,6 +378,32 @@
                 </StackPanel>
             </Border>
 
+            <TextBlock x:Uid="Settings_TransferHeader" Style="{StaticResource SectionHeaderStyle}" />
+            <Border Style="{StaticResource SettingsCardStyle}">
+                <StackPanel Spacing="10">
+                    <TextBlock
+                        x:Uid="Settings_TransferDesc"
+                        TextWrapping="Wrap"
+                        Opacity="0.75"
+                        Style="{ThemeResource CaptionTextBlockStyle}"
+                    />
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <Button Click="OnExport">
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <FontIcon Glyph="&#xE898;" FontSize="14" />
+                                <TextBlock x:Uid="Settings_Export" />
+                            </StackPanel>
+                        </Button>
+                        <Button Click="OnImport">
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <FontIcon Glyph="&#xE896;" FontSize="14" />
+                                <TextBlock x:Uid="Settings_Import" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
             <TextBlock x:Uid="Settings_QuitHeader" Style="{StaticResource SectionHeaderStyle}" />
             <Border Style="{StaticResource SettingsCardStyle}">
                 <StackPanel Spacing="8">

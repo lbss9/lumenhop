@@ -109,10 +109,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Grid ColumnSpacing="6">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <StackPanel Spacing="2" VerticalAlignment="Center">
@@ -124,17 +123,7 @@
                 />
             </StackPanel>
             <Button
-                x:Name="TransferButton"
                 Grid.Column="1"
-                Click="OnTransferMenu"
-                Style="{StaticResource GhostButtonStyle}"
-                Padding="8,6"
-                VerticalAlignment="Center"
-            >
-                <FontIcon Glyph="&#xE712;" FontSize="16" />
-            </Button>
-            <Button
-                Grid.Column="2"
                 Click="OnAdd"
                 Style="{ThemeResource AccentButtonStyle}"
                 Padding="10,6"
