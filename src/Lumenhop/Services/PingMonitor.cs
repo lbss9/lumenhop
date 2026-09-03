@@ -147,6 +147,11 @@ public sealed class PingMonitor
         }
         else
         {
+            if (
+                IconStore.IsManaged(vm.IconPath)
+                && !string.Equals(vm.IconPath, target.IconPath, StringComparison.OrdinalIgnoreCase)
+            )
+                IconStore.Delete(vm.IconPath);
             vm.CopyFrom(target);
         }
 

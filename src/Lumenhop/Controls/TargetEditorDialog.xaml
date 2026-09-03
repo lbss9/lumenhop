@@ -89,13 +89,27 @@
                     Opacity="0.75"
                 />
                 <Grid x:Name="IconHost" />
-                <Button
-                    x:Name="PickImageButton"
-                    x:Uid="Editor_PickImage"
-                    Click="OnPickImage"
-                    HorizontalAlignment="Stretch"
-                    Padding="8,6"
-                />
+                <Grid ColumnSpacing="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        x:Name="PickImageButton"
+                        x:Uid="Editor_PickImage"
+                        Click="OnPickImage"
+                        HorizontalAlignment="Stretch"
+                        Padding="8,6"
+                    />
+                    <Button
+                        x:Name="RemoveImageButton"
+                        x:Uid="Editor_RemoveImage"
+                        Grid.Column="1"
+                        Click="OnRemoveImage"
+                        Padding="8,6"
+                        Visibility="Collapsed"
+                    />
+                </Grid>
             </StackPanel>
 
             <TextBlock

@@ -40,6 +40,7 @@
   <data name="Editor_Polling.Header" xml:space="preserve"><value>Interval</value></data>
   <data name="Editor_Icon.Text" xml:space="preserve"><value>Icon</value></data>
   <data name="Editor_PickImage.Content" xml:space="preserve"><value>Use image…</value></data>
+  <data name="Editor_RemoveImage.Content" xml:space="preserve"><value>Remove</value></data>
   <data name="Editor_PollingItem" xml:space="preserve"><value>Every {0}s</value></data>
   <data name="Editor_PreviewFallback" xml:space="preserve"><value>New target</value></data>
   <data name="Editor_Invalid" xml:space="preserve"><value>Enter a title and a valid IP or host.</value></data>

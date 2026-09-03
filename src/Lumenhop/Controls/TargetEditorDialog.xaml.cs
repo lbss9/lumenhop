@@ -173,6 +173,13 @@ public sealed partial class TargetEditorDialog : ContentDialog
         RefreshPreview();
     }
 
+    private void OnRemoveImage(object sender, RoutedEventArgs e)
+    {
+        _pendingImagePath = null;
+        HighlightIcon(_glyph);
+        RefreshPreview();
+    }
+
     private void OnPrimaryClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
     {
         var draft = BuildDraft();
@@ -220,6 +227,7 @@ public sealed partial class TargetEditorDialog : ContentDialog
             : TitleBox.Text.Trim();
         PreviewHost.Text = string.IsNullOrWhiteSpace(HostBox.Text) ? "—" : HostBox.Text.Trim();
         var hasImage = !string.IsNullOrEmpty(_pendingImagePath) && File.Exists(_pendingImagePath);
+        RemoveImageButton.Visibility = hasImage ? Visibility.Visible : Visibility.Collapsed;
         PreviewImage.Visibility = hasImage ? Visibility.Visible : Visibility.Collapsed;
         PreviewGlyph.Visibility = hasImage ? Visibility.Collapsed : Visibility.Visible;
         PreviewGlyph.Glyph = _glyph;
