@@ -9,6 +9,14 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.2.1 — 3 September 2026
+
+### Changed
+
+- Import and export now live in **Settings**, next to Quit, instead of the Home menu.
+
+---
+
 ## 1.2.0 — 3 September 2026
 
 Share your targets.

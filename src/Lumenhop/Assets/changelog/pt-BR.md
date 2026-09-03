@@ -1,3 +1,11 @@
+# 1.2.1
+
+3 de setembro de 2026 · importar/exportar nas configurações
+
+- Importar e exportar agora ficam nas **Configurações**, ao lado de Sair, em vez do menu da tela inicial.
+
+---
+
 # 1.2.0
 
 3 de setembro de 2026 · compartilhe seus destinos

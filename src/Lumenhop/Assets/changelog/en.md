@@ -1,3 +1,11 @@
+# 1.2.1
+
+3 September 2026 · import/export moved to Settings
+
+- Import and export now live in **Settings**, next to Quit, instead of the Home menu.
+
+---
+
 # 1.2.0
 
 3 September 2026 · share your targets
