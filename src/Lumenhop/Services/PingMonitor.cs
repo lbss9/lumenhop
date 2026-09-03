@@ -132,18 +132,6 @@ public sealed class PingMonitor
         RaiseUpdated();
     }
 
-    public string Summary()
-    {
-        if (Targets.Count == 0)
-            return Loc.Get("Home_EmptyStatus");
-
-        var online = Targets.Count(item =>
-            item.IsEnabled && item.State is PingState.Online or PingState.Slow
-        );
-        var down = Targets.Count(item => item.IsEnabled && item.State == PingState.Down);
-        return string.Format(Loc.Get("Home_Summary"), online, down, Targets.Count);
-    }
-
     private PingTargetViewModel? Find(string id) => Targets.FirstOrDefault(item => item.Id == id);
 
     private void Upsert(PingTarget target, bool persist)

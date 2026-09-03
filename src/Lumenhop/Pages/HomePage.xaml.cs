@@ -45,7 +45,6 @@ public sealed partial class HomePage : Page
         var empty = PingMonitor.Instance.Targets.Count == 0;
         EmptyState.Visibility = empty ? Visibility.Visible : Visibility.Collapsed;
         TargetList.Visibility = empty ? Visibility.Collapsed : Visibility.Visible;
-        SummaryText.Text = PingMonitor.Instance.Summary();
     }
 
     private void OnCardPointerEntered(object sender, PointerRoutedEventArgs e) =>

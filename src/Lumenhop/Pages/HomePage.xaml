@@ -116,16 +116,11 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
-            <StackPanel Spacing="2" VerticalAlignment="Center">
-                <TextBlock x:Uid="Home_Heading" Style="{ThemeResource BodyStrongTextBlockStyle}" />
-                <TextBlock
-                    x:Name="SummaryText"
-                    Opacity="0.7"
-                    TextWrapping="NoWrap"
-                    TextTrimming="CharacterEllipsis"
-                    Style="{ThemeResource CaptionTextBlockStyle}"
-                />
-            </StackPanel>
+            <TextBlock
+                x:Uid="Home_Heading"
+                VerticalAlignment="Center"
+                Style="{ThemeResource BodyStrongTextBlockStyle}"
+            />
             <Button
                 Grid.Column="1"
                 Click="OnAdd"
