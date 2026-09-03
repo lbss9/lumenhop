@@ -1,3 +1,12 @@
+# 1.0.2
+
+3 de setembro de 2026 · aviso de atualização que te encontra
+
+- Agora o app **verifica atualizações também enquanto está aberto**, não só na abertura — uma checagem discreta a cada 6 horas.
+- Quando sai uma versão nova, aparece uma **notificação na bandeja** — abra o Lumenhop para instalar. A janela de update não abre mais sozinha na sua frente.
+
+---
+
 # 1.0.1
 
 3 de setembro de 2026 · acabamento e estabilidade

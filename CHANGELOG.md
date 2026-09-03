@@ -9,6 +9,19 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.0.2 — 3 September 2026
+
+Updates that find you.
+
+### Added
+
+- **Automatic update checks while the app is open**, not just at launch — a quiet
+  re-check every 6 hours.
+- A **discreet tray notification** when a new version is ready — open Lumenhop to
+  install. The update window no longer pops in front of you on its own.
+
+---
+
 ## 1.0.1 — 3 September 2026
 
 Polish and stability.

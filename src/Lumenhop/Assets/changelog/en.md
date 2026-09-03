@@ -1,3 +1,12 @@
+# 1.0.2
+
+3 September 2026 · updates that find you
+
+- The app now **checks for updates while it's open**, not only at launch — a quiet re-check every 6 hours.
+- When a new version is ready, a **tray notification** appears — open Lumenhop to install. The update window no longer pops in front of you on its own.
+
+---
+
 # 1.0.1
 
 3 September 2026 · polish and stability
