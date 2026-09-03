@@ -166,7 +166,13 @@ public sealed class PingMonitor
 
     private async Task ProbeOnceAsync(PingTargetViewModel vm, CancellationToken cancellationToken)
     {
-        OnUi(vm.SetProbing);
+        // Only show the probing hint on the very first reading. On later polls the value
+        // updates in place, so the latency text never flashes "…" between readings.
+        OnUi(() =>
+        {
+            if (vm.State == PingState.Idle)
+                vm.SetProbing();
+        });
         var timeout = Math.Clamp(vm.PollingSeconds * 1000 - 200, 800, PingClient.DefaultTimeoutMs);
         var result = await PingClient.ProbeAsync(vm.Host, timeout, cancellationToken);
         var state = PingStatusMapper.FromProbe(result);
