@@ -1,3 +1,11 @@
+# 1.3.2
+
+3 de setembro de 2026 · botões reposicionados
+
+- Os botões **Iniciar todos** e **Parar todos** agora ficam à esquerda do Adicionar.
+
+---
+
 # 1.3.1
 
 3 de setembro de 2026 · cabeçalho mais limpo

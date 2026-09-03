@@ -1,3 +1,11 @@
+# 1.3.2
+
+3 September 2026 · buttons repositioned
+
+- The **Start all** and **Stop all** buttons now sit to the left of Add.
+
+---
+
 # 1.3.1
 
 3 September 2026 · a cleaner header

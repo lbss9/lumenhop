@@ -9,6 +9,14 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.3.2 — 3 September 2026
+
+### Changed
+
+- The **Start all** and **Stop all** buttons now sit to the left of Add.
+
+---
+
 ## 1.3.1 — 3 September 2026
 
 ### Changed
