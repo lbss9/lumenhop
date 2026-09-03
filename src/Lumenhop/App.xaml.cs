@@ -12,12 +12,16 @@ public partial class App : Application
     {
         UnhandledException += (_, e) =>
         {
-            var path = Path.Combine(SettingsStore.DirectoryPath, "crash.log");
-            Directory.CreateDirectory(SettingsStore.DirectoryPath);
-            File.WriteAllText(
-                path,
-                $"{DateTime.UtcNow:O}\n{e.Exception.GetType().FullName}: {e.Message}"
-            );
+            try
+            {
+                var path = Path.Combine(SettingsStore.DirectoryPath, "crash.log");
+                Directory.CreateDirectory(SettingsStore.DirectoryPath);
+                File.WriteAllText(
+                    path,
+                    $"{DateTime.UtcNow:O}\n{e.Exception.GetType().FullName}: {e.Message}"
+                );
+            }
+            catch { }
         };
         InitializeComponent();
     }

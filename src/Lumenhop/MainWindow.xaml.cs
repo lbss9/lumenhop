@@ -159,32 +159,6 @@ public sealed partial class MainWindow : Window
             ContentFrame.Navigate(page);
     }
 
-    private void OnPaneOpening(NavigationView sender, object args) => SetPaneGlass(true);
-
-    private void OnPaneClosed(NavigationView sender, object args) => SetPaneGlass(false);
-
-    private void SetPaneGlass(bool open)
-    {
-        if (NavView.Resources["NavigationViewDefaultPaneBackground"] is not AcrylicBrush brush)
-            return;
-
-        if (open)
-        {
-            brush.TintOpacity = 0.5;
-            brush.TintLuminosityOpacity = 0.55;
-            brush.FallbackColor = Application.Current.Resources["SolidBackgroundFillColorSecondary"]
-                is Color c
-                ? c
-                : Color.FromArgb(255, 18, 24, 30);
-        }
-        else
-        {
-            brush.TintOpacity = 0.0;
-            brush.TintLuminosityOpacity = 0.0;
-            brush.FallbackColor = Colors.Transparent;
-        }
-    }
-
     private void TrySetGlassBackdrop()
     {
         if (!DesktopAcrylicController.IsSupported())

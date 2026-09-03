@@ -47,13 +47,12 @@
             PaneDisplayMode="LeftCompact"
             IsSettingsVisible="True"
             IsBackButtonVisible="Collapsed"
+            IsPaneToggleButtonVisible="False"
             IsTitleBarAutoPaddingEnabled="False"
             OpenPaneLength="196"
             CompactPaneLength="48"
             Background="Transparent"
             SelectionChanged="OnNavSelectionChanged"
-            PaneOpening="OnPaneOpening"
-            PaneClosed="OnPaneClosed"
         >
             <NavigationView.Resources>
                 <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
