@@ -46,7 +46,7 @@ public partial class App : Application
         var check = await UpdateService.CheckAsync();
         if (check.Kind != UpdateCheckKind.Available || check.Offer is null)
             return;
-        Main?.DispatcherQueue.TryEnqueue(() => Main.ShowUpdate(check.Offer));
+        Main?.DispatcherQueue.TryEnqueue(() => Main.NotifyUpdate(check.Offer));
     }
 
     public static void ApplyCulture(string language)

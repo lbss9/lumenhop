@@ -99,5 +99,7 @@
   <data name="Update_Install.Content" xml:space="preserve"><value>Instalar</value></data>
   <data name="Update_Downloading" xml:space="preserve"><value>Baixando a atualização…</value></data>
   <data name="Update_Failed" xml:space="preserve"><value>Não foi possível baixar. Tente de novo em instantes.</value></data>
+  <data name="Update_ToastTitle" xml:space="preserve"><value>Atualização disponível</value></data>
+  <data name="Update_ToastBody" xml:space="preserve"><value>Lumenhop {0} está pronta. Abra o app para instalar.</value></data>
   <data name="Changelog_Missing" xml:space="preserve"><value>Changelog não encontrado.</value></data>
 </root>

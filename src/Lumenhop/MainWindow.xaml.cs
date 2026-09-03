@@ -3,6 +3,7 @@ using H.NotifyIcon;
 using H.NotifyIcon.Core;
 using Lumenhop.Pages;
 using Microsoft.UI;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Composition;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Windowing;
@@ -36,6 +37,11 @@ public sealed partial class MainWindow : Window
     private bool _acrylicOn = true;
     private int _opacityPct = 28;
 
+    private static readonly TimeSpan UpdateCheckInterval = TimeSpan.FromHours(6);
+    private DispatcherQueueTimer? _updateTimer;
+    private UpdateOffer? _pendingOffer;
+    private string? _notifiedVersion;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -59,6 +65,7 @@ public sealed partial class MainWindow : Window
         SetupTray();
         PingMonitor.Instance.Start(DispatcherQueue);
         ApplyAnchor();
+        StartUpdateTimer();
 
         NavView.Loaded += (_, _) => NavView.SelectedItem = HomeNav;
     }
@@ -95,6 +102,7 @@ public sealed partial class MainWindow : Window
     public void ExitApplication()
     {
         _allowClose = true;
+        _updateTimer?.Stop();
         PingMonitor.Instance.Stop();
         _tray?.Dispose();
         Close();
@@ -127,8 +135,54 @@ public sealed partial class MainWindow : Window
     public void ShowUpdate(UpdateOffer offer)
     {
         ShowFromTray();
+        OpenUpdateWindow(offer);
+    }
+
+    /// <summary>Announces a newer build with a discreet tray toast, never a pop-up window.</summary>
+    public void NotifyUpdate(UpdateOffer offer)
+    {
+        _pendingOffer = offer;
+        if (_notifiedVersion == offer.Version)
+            return;
+
+        _notifiedVersion = offer.Version;
+        _tray?.ShowNotification(
+            Loc.Get("Update_ToastTitle"),
+            string.Format(Loc.Get("Update_ToastBody"), offer.Version),
+            NotificationIcon.Info
+        );
+    }
+
+    private void OpenFromTray()
+    {
+        ShowFromTray();
+        if (_pendingOffer is not null)
+            OpenUpdateWindow(_pendingOffer);
+    }
+
+    private static void OpenUpdateWindow(UpdateOffer offer)
+    {
         var window = new UpdateWindow(offer);
         window.Activate();
+    }
+
+    private void StartUpdateTimer()
+    {
+        _updateTimer = DispatcherQueue.CreateTimer();
+        _updateTimer.Interval = UpdateCheckInterval;
+        _updateTimer.IsRepeating = true;
+        _updateTimer.Tick += (_, _) => _ = CheckForUpdatesAsync();
+        _updateTimer.Start();
+    }
+
+    private async Task CheckForUpdatesAsync()
+    {
+        if (!SettingsStore.Load().CheckUpdatesOnLaunch)
+            return;
+
+        var check = await UpdateService.CheckAsync();
+        if (check.Kind == UpdateCheckKind.Available && check.Offer is not null)
+            NotifyUpdate(check.Offer);
     }
 
     public void ApplyBackdropSettings()
@@ -222,7 +276,7 @@ public sealed partial class MainWindow : Window
 
     private void SetupTray()
     {
-        var show = new RelayCommand(ShowFromTray);
+        var show = new RelayCommand(OpenFromTray);
         var close = new RelayCommand(ExitApplication);
 
         _trayOpen = new MenuFlyoutItem { Command = show };
