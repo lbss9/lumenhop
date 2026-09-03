@@ -1,3 +1,11 @@
+# 1.4.0
+
+3 de setembro de 2026 · dá pra tirar a logo
+
+- Botão **Remover** no editor de destino para tirar a imagem customizada e voltar ao ícone Fluent. Trocar ou remover uma imagem também apaga o arquivo antigo do disco.
+
+---
+
 # 1.3.2
 
 3 de setembro de 2026 · botões reposicionados

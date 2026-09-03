@@ -1,3 +1,11 @@
+# 1.4.0
+
+3 September 2026 · take the logo back off
+
+- A **Remove** button in the target editor to drop a custom image and return to a Fluent icon. Replacing or removing an image also deletes the old file from disk.
+
+---
+
 # 1.3.2
 
 3 September 2026 · buttons repositioned

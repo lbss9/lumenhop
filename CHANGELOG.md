@@ -9,6 +9,17 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.4.0 — 3 September 2026
+
+Take the logo back off.
+
+### Added
+
+- A **Remove** button in the target editor to drop a custom image and return to a
+  Fluent icon. Replacing or removing an image also deletes the old file from disk.
+
+---
+
 ## 1.3.2 — 3 September 2026
 
 ### Changed
