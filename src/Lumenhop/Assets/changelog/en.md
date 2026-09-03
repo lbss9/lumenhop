@@ -1,3 +1,11 @@
+# 1.3.1
+
+3 September 2026 · a cleaner header
+
+- The Home header no longer shows the status count line (`4 online · 1 offline · …`).
+
+---
+
 # 1.3.0
 
 3 September 2026 · start and stop, all at once

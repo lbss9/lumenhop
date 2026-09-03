@@ -1,3 +1,11 @@
+# 1.3.1
+
+3 de setembro de 2026 · cabeçalho mais limpo
+
+- O cabeçalho da tela inicial não mostra mais a linha de contagem (`4 online · 1 offline · …`).
+
+---
+
 # 1.3.0
 
 3 de setembro de 2026 · ligar e desligar todos de uma vez

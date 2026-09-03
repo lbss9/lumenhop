@@ -9,6 +9,14 @@ This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PAT
 
 ---
 
+## 1.3.1 — 3 September 2026
+
+### Changed
+
+- The Home header no longer shows the status count line (`4 online · 1 offline · …`).
+
+---
+
 ## 1.3.0 — 3 September 2026
 
 Start and stop, all at once.
