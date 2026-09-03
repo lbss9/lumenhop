@@ -1,3 +1,12 @@
+# 1.0.1
+
+3 de setembro de 2026 · acabamento e estabilidade
+
+- A navegação lateral virou uma **barra de ícones fixa** — sem o botão de abrir e sem a animação de recolher que dava aquele tranco.
+- Registro de falhas mais robusto: gravar o `crash.log` nunca mais mascara o erro original.
+
+---
+
 # 1.0.0
 
 31 de agosto de 2026 · primeira versão pública

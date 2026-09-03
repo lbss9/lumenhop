@@ -1,9 +1,31 @@
 # Changelog
 
-What changes in each version. In the app, the same text appears in the current language:
+Every change, newest first. The same notes appear in the app, in the current language:
 
 - [Portuguese](src/Lumenhop/Assets/changelog/pt-BR.md)
 - [English](src/Lumenhop/Assets/changelog/en.md)
+
+This project follows [Semantic Versioning](https://semver.org): `MAJOR.MINOR.PATCH`.
+
+---
+
+## 1.0.1 — 3 September 2026
+
+Polish and stability.
+
+### Changed
+
+- The side navigation is now a **fixed icon rail**. The "Open navigation" toggle and
+  its collapse animation are gone — no more stutter when the pane snapped shut.
+
+### Fixed
+
+- Crash logging is hardened: writing `crash.log` can never itself throw and mask the
+  original error.
+
+### Internal
+
+- Removed dead pane-glass code left over from the collapsible pane.
 
 ---
 
@@ -12,7 +34,6 @@ What changes in each version. In the app, the same text appears in the current l
 First public release.
 
 A Windows ping monitor. Flyout in the corner, living cards, continuous ping.
-
 Installer: `Lumenhop-win.msi` (per-user, `%LOCALAPPDATA%\Lumenhop`).
 
 ### Targets
@@ -42,5 +63,3 @@ Installer: `Lumenhop-win.msi` (per-user, `%LOCALAPPDATA%\Lumenhop`).
 - In-app notice when a new version ships
 - Changelog in the current language
 - Install now, or later from Settings
-
-Preferences live in `%LOCALAPPDATA%\Lumenhop`.

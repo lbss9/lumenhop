@@ -1,3 +1,12 @@
+# 1.0.1
+
+3 September 2026 · polish and stability
+
+- The side navigation is now a **fixed icon rail** — the "Open navigation" toggle and its collapse animation are gone, so no more stutter when the pane snapped shut.
+- Hardened crash logging: writing `crash.log` can never mask the original error.
+
+---
+
 # 1.0.0
 
 31 August 2026 · first public release
